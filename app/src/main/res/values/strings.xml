@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Trabalho02</string>
+    <string name="Inserir">Cadastrar Funcionário</string>
+    <string name="nome_funcionario">Nome</string>
+    <string name="salario_funcionario">Salário</string>
+    <string name="titulo_tela_funcionario">Cadastro de Funcionário</string>
+    <string name="cpf_funcionario">CPF</string>
+    <string name="funcao_funcionario">Função</string>
+</resources>
