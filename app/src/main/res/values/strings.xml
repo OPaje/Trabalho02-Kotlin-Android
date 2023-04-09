@@ -6,4 +6,13 @@
     <string name="titulo_tela_funcionario">Cadastro de Funcionário</string>
     <string name="cpf_funcionario">CPF</string>
     <string name="funcao_funcionario">Função</string>
+    <string name="titulo_tela_posto">Controle Posto de Gasolina</string>
+    <string-array name="opcoesCRUD">
+        <item>Inserir Posto</item>
+        <item>Mostrar Postos</item>
+        <item>Atualizar Posto</item>
+        <item>Remover Posto</item>
+        <item>Mostrar Caixa Total</item>
+        <item>Mostrar Postos Abaixo de 1000L</item>
+    </string-array>
 </resources>
