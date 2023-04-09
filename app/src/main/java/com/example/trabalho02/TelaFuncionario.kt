@@ -3,17 +3,17 @@ package com.example.trabalho02
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import com.example.trabalho02.databinding.ActivityMainBinding
 import android.widget.Toast
+import com.example.trabalho02.databinding.TelaFuncionarioBinding
 
 
-class MainActivity : AppCompatActivity() {
+class TelaFuncionario : AppCompatActivity() {
 
-    lateinit var binding : ActivityMainBinding
+    lateinit var binding : TelaFuncionarioBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = TelaFuncionarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val funcionarios : MutableList<Funcionarios> = mutableListOf()

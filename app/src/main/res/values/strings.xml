@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trabalho02</string>
+    <string name="app_name">Trabalho 02</string>
     <string name="Inserir">Cadastrar Funcionário</string>
     <string name="nome_funcionario">Nome</string>
     <string name="salario_funcionario">Salário</string>
@@ -7,6 +7,13 @@
     <string name="cpf_funcionario">CPF</string>
     <string name="funcao_funcionario">Função</string>
     <string name="titulo_tela_posto">Controle Posto de Gasolina</string>
+    <string name="titulo_inserir_posto">Inserir Posto</string>
+    <string name="cnpj">CNPJ</string>
+    <string name="cidade">Cidade</string>
+    <string name="caixa">Caixa</string>
+    <string name="volume_armazenado">Volume Armazenado</string>
+    <string name="quantidade_funcionarios">Quantidade Funcionários</string>
+    <string name="inserir_posto">Inserir Posto</string>
     <string-array name="opcoesCRUD">
         <item>Inserir Posto</item>
         <item>Mostrar Postos</item>
@@ -15,4 +22,11 @@
         <item>Mostrar Caixa Total</item>
         <item>Mostrar Postos Abaixo de 1000L</item>
     </string-array>
+    <string-array name="opcoesExec">
+        <item>Exercício Funcionário</item>
+        <item>Exercício Posto</item>
+        <item>Exercício Empresa de Móveis</item>
+        <item>Exercício Curso</item>
+    </string-array>
+
 </resources>
