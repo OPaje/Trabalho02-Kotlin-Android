@@ -14,6 +14,8 @@
     <string name="volume_armazenado">Volume Armazenado</string>
     <string name="quantidade_funcionarios">Quantidade Funcionários</string>
     <string name="inserir_posto">Inserir Posto</string>
+    <string name="titulo_tela_mostra_postos">Postos Cadastrados</string>
+    <string name="home">Home</string>
     <string-array name="opcoesCRUD">
         <item>Inserir Posto</item>
         <item>Mostrar Postos</item>

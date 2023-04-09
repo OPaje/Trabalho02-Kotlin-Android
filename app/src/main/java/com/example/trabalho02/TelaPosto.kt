@@ -13,7 +13,7 @@ import javax.sql.ConnectionPoolDataSource
 class TelaPosto : AppCompatActivity() {
 
     lateinit var binding: TelaPostoBinding
-    val listaPosto : MutableList<PostoDeGasolina> = mutableListOf()
+    val listaPosto : ArrayList<PostoDeGasolina> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,8 @@ class TelaPosto : AppCompatActivity() {
         }
 
         val opcoes = hashMapOf(
-            "Inserir Posto" to {register.launch(Intent(applicationContext, TelaInserirPosto::class.java))}
+            "Inserir Posto" to {register.launch(Intent(applicationContext, TelaInserirPosto::class.java))},
+            "Mostrar Postos" to {startActivity(Intent(applicationContext, TelaMostraPosto::class.java).apply { putParcelableArrayListExtra("777", listaPosto)})}
         )
 
         binding.lvOpcoesPosto.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
