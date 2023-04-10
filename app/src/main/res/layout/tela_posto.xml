@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".TelaPosto">
 
+    <ListView
+        android:id="@+id/lv_opcoes_posto"
+        android:layout_width="377dp"
+        android:layout_height="293dp"
+        app:layout_constraintBottom_toTopOf="@+id/lv_postos_volume_abaixo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_tela_posto"
+        app:layout_constraintVertical_bias="0.5" />
+
     <TextView
         android:id="@+id/titulo_tela_posto"
         android:layout_width="wrap_content"
@@ -21,13 +32,13 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <ListView
-        android:id="@+id/lv_opcoes_posto"
-        android:layout_width="374dp"
-        android:layout_height="383dp"
+        android:id="@+id/lv_postos_volume_abaixo"
+        android:layout_width="359dp"
+        android:layout_height="234dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_tela_posto"
+        app:layout_constraintTop_toBottomOf="@+id/lv_opcoes_posto"
         app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

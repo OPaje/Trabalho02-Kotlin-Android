@@ -10,6 +10,10 @@ data class PostoDeGasolina(
     val caixa:Double,
     val volumeArmazenado:Int,
     val qtdFuncionarios:Int
-): Parcelable
+): Parcelable {
+    override fun toString(): String {
+        return "CNPJ = $cnpj Cidade = $cidade \nCaixa = $caixa Volume Armazenado = $volumeArmazenado \nQuantidade Funcionarios = $qtdFuncionarios"
+    }
+}
 
 
