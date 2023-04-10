@@ -34,8 +34,22 @@ class TelaPosto : AppCompatActivity() {
                     }
                 }
             }
-
         }
+
+        val registerAtualiza = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ){result : ActivityResult ->
+            if (result.resultCode == RESULT_OK){
+                result.data?.let {
+                    if(it.hasExtra("444")){
+                        val posto : PostoDeGasolina = it.getParcelableExtra("444")!!
+                        val indice = listaPosto.indexOfFirst { it.cnpj == posto.cnpj }
+                        listaPosto.set(indice, posto)
+                    }
+                }
+            }
+        }
+
         fun postosAbaixo1000L(lista : ArrayList<PostoDeGasolina>) : ArrayList<PostoDeGasolina>{
             val abaixo : ArrayList<PostoDeGasolina> = ArrayList()
             for (posto in lista){
@@ -49,7 +63,13 @@ class TelaPosto : AppCompatActivity() {
 
         val opcoes = hashMapOf(
             "Inserir Posto" to {register.launch(Intent(applicationContext, TelaInserirPosto::class.java))},
-            "Mostrar Postos" to {startActivity(Intent(applicationContext, TelaMostraPosto::class.java).apply { putParcelableArrayListExtra("777", listaPosto)})},
+
+            "Mostrar Postos" to {startActivity(Intent(applicationContext, TelaMostraPosto::class.java).apply {
+                putParcelableArrayListExtra("777", listaPosto)})},
+
+            "Atualizar Posto" to {registerAtualiza.launch(Intent(applicationContext, TelaAtualizaPosto::class.java).apply {
+                putParcelableArrayListExtra("222", listaPosto) })},
+
             "Mostrar Caixa Total" to {
                 val totalCaixa : Double = listaPosto.sumOf { it.caixa }
                 Toast.makeText(applicationContext, "Caixa Total R$$totalCaixa", Toast.LENGTH_SHORT).show()
