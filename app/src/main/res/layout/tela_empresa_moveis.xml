@@ -15,4 +15,11 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="45dp" />
+
+    <ListView
+        android:id="@+id/lv_opcoes_crud_movel"
+        android:layout_width="378dp"
+        android:layout_height="240dp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="139dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
