@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.example.trabalho02.databinding.TelaExerciciosBinding
+import com.example.trabalho02.moveis.TelaEmpresaMoveis
 
 class TelaExercicios : AppCompatActivity() {
     lateinit var binding: TelaExerciciosBinding
@@ -20,7 +21,8 @@ class TelaExercicios : AppCompatActivity() {
 
         val vaiParaExec = hashMapOf(
             "Exercício Funcionário" to {startActivity(Intent(applicationContext, TelaFuncionario::class.java))},
-            "Exercício Posto" to {startActivity(Intent(applicationContext, TelaPosto::class.java))}
+            "Exercício Posto" to {startActivity(Intent(applicationContext, TelaPosto::class.java))},
+            "Exercício Empresa de Móveis" to {startActivity(Intent(applicationContext, TelaEmpresaMoveis::class.java))}
         )
 
         binding.lvOpcoesExercicios.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
