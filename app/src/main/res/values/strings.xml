@@ -19,6 +19,10 @@
     <string name="atualizar_postos">Atualizar Postos</string>
     <string name="atualizar">Atualizar</string>
     <string name="posto_atualizado">Posto Atualizado com Sucesso</string>
+    <string name="remover_postos">Remover Postos</string>
+    <string name="buscar">Buscar</string>
+    <string name="remover">Remover</string>
+    <string name="o_posto_vai_aparecer_aqui">O POSTO VAI APARECER AQUI</string>
     <string-array name="opcoesCRUD">
         <item>Inserir Posto</item>
         <item>Mostrar Postos</item>
