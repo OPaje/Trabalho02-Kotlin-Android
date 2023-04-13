@@ -15,7 +15,7 @@ class Cama(tamanho:String, pesoSuportado:Double, codigo:String, material:String,
         }
 
     override fun toString(): String {
-        return " Tamanho = $tamanho Peso Suportado = $pesoSuportado"
+        return "Codigo = $codigo Material = $material Peso = $peso Cor = $cor\n Tamanho = $tamanho Peso Suportado = $pesoSuportado"
     }
 
 

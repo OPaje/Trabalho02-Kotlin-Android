@@ -3,6 +3,7 @@ package com.example.trabalho02.moveis
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -50,8 +51,13 @@ class TelaInserirMovel : AppCompatActivity(), AdapterView.OnItemSelectedListener
 
         binding.btnInserirMovel.setOnClickListener {
             val movel = retornaMovel(binding.spTipoMoveis.selectedItem.toString())
+            Log.i("Teste", "${movel.toString()}")
 
-            arquivoExterno = File(getExternalFilesDir(caminhoDoArquivo), "moveis.txt")
+            val texto = "${binding.spTipoMoveis.selectedItem.toString()} ${binding.etCodigoMovel.text.toString()} ${binding.etMaterialMovel.text.toString()}" +
+                            "\n${binding.etPesoMovel.text.toString()} ${binding.etCorMovel.text.toString()} ${binding.etAtributo5Movel.text.toString()} " +
+                                    "${binding.etAtributo6Movel.text.toString()} "
+
+            arquivoExterno = File(getExternalFilesDir(caminhoDoArquivo), "moveis3.txt")
             try {
                 val fileOutPutStream = FileOutputStream(arquivoExterno)
                 fileOutPutStream.write(movel.toString().toByteArray())
@@ -60,6 +66,13 @@ class TelaInserirMovel : AppCompatActivity(), AdapterView.OnItemSelectedListener
                 e.printStackTrace()
             }
             Toast.makeText(applicationContext,"Móvel salvo", Toast.LENGTH_SHORT).show()
+
+            binding.etCodigoMovel.text.clear()
+            binding.etMaterialMovel.text.clear()
+            binding.etCorMovel.text.clear()
+            binding.etPesoMovel.text.clear()
+            binding.etAtributo5Movel.text.clear()
+            binding.etAtributo6Movel.text.clear()
         }
 
         binding.btnHomeTelaInserirMovel.setOnClickListener {

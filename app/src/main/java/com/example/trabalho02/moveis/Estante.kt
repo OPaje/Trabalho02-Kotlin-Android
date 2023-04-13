@@ -11,7 +11,7 @@ class Estante(altura:Double, qtdCompartimentos:Int, codigo:String, material:Stri
         }
 
     override fun toString(): String {
-        return "Altura = $altura QtdCompartimentos = $qtdCompartimentos"
+        return "Codigo = $codigo Material = $material Peso = $peso Cor = $cor\n Altura = $altura QtdCompartimentos = $qtdCompartimentos"
     }
 
 

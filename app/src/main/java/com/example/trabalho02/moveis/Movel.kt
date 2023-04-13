@@ -5,10 +5,10 @@ import kotlinx.parcelize.Parcelize
 
 open class Movel(codigo:String, material:String, peso:Double, cor:String){
 
-    private val codigo : String
-    private val material : String
-    private val peso : Double
-    private val cor : String
+    val codigo : String
+    val material : String
+    val peso : Double
+    val cor : String
 
     init {
         this.codigo = codigo

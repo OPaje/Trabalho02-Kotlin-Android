@@ -12,7 +12,7 @@ class Cadeira(qtdPernas:Int, encosto:Boolean, codigo:String, material:String, pe
     }
 
     override fun toString(): String {
-        return "qtdPernas = $qtdPernas Encosto = $encosto"
+        return "Codigo = $codigo Material = $material Peso = $peso Cor = $cor\n qtdPernas = $qtdPernas Encosto = $encosto"
     }
 
 
