@@ -3,6 +3,7 @@ package com.example.trabalho02.moveis
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,8 +20,7 @@ class TelaEmpresaMoveis : AppCompatActivity() {
         setContentView(binding.root)
 
         val opcoesCrud = resources.getStringArray(R.array.opcoes_crud_movel)
-        val adaptador =
-            ArrayAdapter(applicationContext, android.R.layout.simple_list_item_1, opcoesCrud)
+        val adaptador = ArrayAdapter(applicationContext, android.R.layout.simple_list_item_1, opcoesCrud)
         binding.lvOpcoesCrudMovel.adapter = adaptador
 
         val register = registerForActivityResult(
@@ -36,8 +36,16 @@ class TelaEmpresaMoveis : AppCompatActivity() {
             }
         }
 
+
+
         val opcoes = hashMapOf(
-            "Inserir Móveis" to {register.launch(Intent(applicationContext, TelaInserirMovel::class.java))}
+            "Inserir Móvel" to {register.launch(Intent(applicationContext, TelaInserirMovel::class.java))},
+            "Mostrar Móveis" to {startActivity(Intent(applicationContext, TelaMostrarMovel::class.java))}
         )
+
+        binding.lvOpcoesCrudMovel.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val textoSelecionado = parent.getItemAtPosition(position)
+            opcoes[textoSelecionado]?.invoke()
+        }
     }
 }

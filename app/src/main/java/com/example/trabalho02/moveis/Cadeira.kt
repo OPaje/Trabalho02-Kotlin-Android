@@ -10,4 +10,10 @@ class Cadeira(qtdPernas:Int, encosto:Boolean, codigo:String, material:String, pe
         this.qtdPernas = qtdPernas
         this.encosto = encosto
     }
+
+    override fun toString(): String {
+        return "qtdPernas = $qtdPernas Encosto = $encosto"
+    }
+
+
 }

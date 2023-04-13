@@ -9,4 +9,10 @@ class Estante(altura:Double, qtdCompartimentos:Int, codigo:String, material:Stri
             this.altura = altura
             this.qtdCompartimentos = qtdCompartimentos
         }
+
+    override fun toString(): String {
+        return "Altura = $altura QtdCompartimentos = $qtdCompartimentos"
+    }
+
+
 }

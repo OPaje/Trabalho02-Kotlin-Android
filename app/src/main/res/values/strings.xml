@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Trabalho 02</string>
-    <string name="Inserir">Cadastrar Funcionário</string>
-    <string name="nome_funcionario">Nome</string>
+    <string name="cadastrar_funcionario">Cadastrar Funcionário</string>
+    <string name="nome">Nome</string>
+    <string name="codigo">Código</string>
+    <string name="material">Material</string>
+    <string name="peso">Peso</string>
+    <string name="cor">Cor</string>
+    <string name="inserir">Inserir</string>
     <string name="salario_funcionario">Salário</string>
     <string name="titulo_tela_funcionario">Cadastro de Funcionário</string>
     <string name="cpf_funcionario">CPF</string>
@@ -23,6 +28,11 @@
     <string name="buscar">Buscar</string>
     <string name="remover">Remover</string>
     <string name="o_posto_vai_aparecer_aqui">O POSTO VAI APARECER AQUI</string>
+    <string name="empresa_de_moveis">Empresa de Móveis</string>
+    <string name="cadeira">Cadeira</string>
+    <string name="cama">Cama</string>
+    <string name="estante">Estante</string>
+
     <string-array name="opcoesCRUD">
         <item>Inserir Posto</item>
         <item>Mostrar Postos</item>
@@ -31,6 +41,7 @@
         <item>Mostrar Caixa Total</item>
         <item>Mostrar Postos Abaixo de 1000L</item>
     </string-array>
+
     <string-array name="opcoesExec">
         <item>Exercício Funcionário</item>
         <item>Exercício Posto</item>
@@ -43,6 +54,12 @@
         <item>Mostrar Móveis</item>
         <item>Atualizar Móveis</item>
         <item>Excluir Móvel</item>
+    </string-array>
+
+    <string-array name="opcoesMoveis">
+        <item>Cadeira</item>
+        <item>Cama</item>
+        <item>Estante</item>
     </string-array>
 
 </resources>

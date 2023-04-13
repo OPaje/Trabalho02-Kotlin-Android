@@ -1,6 +1,9 @@
 package com.example.trabalho02.moveis
 
-open class Movel(codigo:String, material:String, peso:Double, cor:String) {
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+open class Movel(codigo:String, material:String, peso:Double, cor:String){
 
     private val codigo : String
     private val material : String
@@ -13,4 +16,10 @@ open class Movel(codigo:String, material:String, peso:Double, cor:String) {
         this.peso = peso
         this.cor = cor
     }
+
+    override fun toString(): String {
+        return "Codigo = $codigo Material = $material Peso = $peso Cor = $cor\n"
+    }
+
+
 }

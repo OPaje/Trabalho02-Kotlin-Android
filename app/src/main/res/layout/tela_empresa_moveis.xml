@@ -10,16 +10,26 @@
         android:id="@+id/titulo_empresa_moveis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Empresa de Móveis"
+        android:text="@string/empresa_de_moveis"
+        android:textAlignment="viewStart"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="45dp" />
+        app:layout_constraintBottom_toTopOf="@+id/lv_opcoes_crud_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <ListView
         android:id="@+id/lv_opcoes_crud_movel"
         android:layout_width="378dp"
         android:layout_height="240dp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="139dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_empresa_moveis"
+        app:layout_constraintVertical_bias="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

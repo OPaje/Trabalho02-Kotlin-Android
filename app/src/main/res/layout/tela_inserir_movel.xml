@@ -6,4 +6,134 @@
     android:layout_height="match_parent"
     tools:context=".moveis.TelaInserirMovel">
 
+    <EditText
+        android:id="@+id/et_codigo_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/codigo"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_material_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_tipo_moveis"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/titulo_inserir_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inserir"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sp_tipo_moveis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_material_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/material"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_peso_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_codigo_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_peso_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/peso"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_cor_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_material_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_cor_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/cor"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_atributo5_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_peso_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_atributo5_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_atributo6_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cor_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_atributo6_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_inserir_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_atributo5_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Spinner
+        android:id="@+id/sp_tipo_moveis"
+        android:layout_width="194dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_codigo_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_inserir_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_inserir_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inserir"
+        app:layout_constraintBottom_toTopOf="@+id/btn_home_tela_inserir_movel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_atributo6_movel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_home_tela_inserir_movel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_inserir_movel"
+        app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
