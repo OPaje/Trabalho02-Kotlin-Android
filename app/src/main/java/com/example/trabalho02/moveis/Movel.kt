@@ -18,7 +18,7 @@ open class Movel(codigo:String, material:String, peso:Double, cor:String){
     }
 
     override fun toString(): String {
-        return "Codigo = $codigo Material = $material Peso = $peso Cor = $cor\n"
+        return "Codigo = $codigo Material = $material Peso = $peso \nCor = $cor"
     }
 
 

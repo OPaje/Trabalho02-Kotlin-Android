@@ -12,6 +12,7 @@ import com.example.trabalho02.R
 import com.example.trabalho02.databinding.TelaInserirMovelBinding
 import java.io.File
 import java.io.FileOutputStream
+import java.io.FileWriter
 import java.io.IOException
 
 
@@ -59,9 +60,17 @@ class TelaInserirMovel : AppCompatActivity(), AdapterView.OnItemSelectedListener
 
             arquivoExterno = File(getExternalFilesDir(caminhoDoArquivo), "moveis3.txt")
             try {
-                val fileOutPutStream = FileOutputStream(arquivoExterno)
-                fileOutPutStream.write(movel.toString().toByteArray())
-                fileOutPutStream.close()
+                val arquivo = File(caminhoDoArquivo, "moveis3.txt")
+                if(arquivo.length() > 0){
+                    val arquivoModificado = FileWriter("moveis3.txt", true)
+                    arquivoModificado.write(movel.toString())
+                    arquivoModificado.flush()
+                    arquivoModificado.close()
+                }else{
+                    val fileOutPutStream = FileOutputStream(arquivoExterno)
+                    fileOutPutStream.write(movel.toString().toByteArray())
+                    fileOutPutStream.close()
+                }
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -101,7 +110,7 @@ class TelaInserirMovel : AppCompatActivity(), AdapterView.OnItemSelectedListener
         }
         return movel
     }
-    fun mudaHint(movel: String){
+    private fun mudaHint(movel: String){
         if(movel == "Cadeira"){
             binding.etAtributo5Movel.hint = "Quantidade de Pernas"
             binding.etAtributo6Movel.setText("Com encosto")
